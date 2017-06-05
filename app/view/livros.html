@@ -1,0 +1,16 @@
+<div id="book-details"></div>
+<div id="books" class="">
+    <ul>
+        <li ng-repeat="l in livros">
+            {{l.imageLinks}}
+            <div class="book">
+                <a href="#!/livro/{{l.id}}" class="img "><img ng-src="{{l.volumeInfo.imageLinks.thumbnail}}"
+                                                              title="{{l.volumeInfo.title}}"></a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="more-books">
+    <button class="btn more-button" ng-click="get_mais()">+ Mais desses livros
+    </button>
+</div>

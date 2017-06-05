@@ -1,0 +1,44 @@
+<div id="book-details"></div>
+<div id="books" class="">
+    <ul>
+        <h1>Suspense</h1>
+        <li ng-repeat="l1 in livros1">
+            <div class="book">
+                <a href="#!/livro/{{l1.id}}" class="img "><img ng-src="{{l1.volumeInfo.imageLinks.smallThumbnail}}"
+                                                               title="{{l1.volumeInfo.title}}"></a>
+            </div>
+        </li>
+        <a href>Mais »</a>
+    </ul>
+    <ul>
+        <h1>Psicologia</h1>
+        <li ng-repeat="l1 in livros2">
+            <div class="book">
+                <a href="#!/livro/{{l1.id}}" class="img "><img ng-src="{{l1.volumeInfo.imageLinks.smallThumbnail}}"
+                                                               title="{{l1.volumeInfo.title}}"></a>
+            </div>
+        </li>
+        <a href>Mais »</a>
+    </ul>
+    <ul>
+        <h1>Poesia</h1>
+        <li ng-repeat="l1 in livros3">
+            <div class="book">
+                <a href="#!/livro/{{l1.id}}" class="img "><img ng-src="{{l1.volumeInfo.imageLinks.smallThumbnail}}"
+                                                               title="{{l1.volumeInfo.title}}"></a>
+            </div>
+        </li>
+        <a href>Mais »</a>
+    </ul>
+    <ul>
+        <h1>Romance</h1>
+        <li ng-repeat="l1 in livros4">
+            <div class="book">
+                <a href="#!/livro/{{l1.id}}" class="img "><img ng-src="{{l1.volumeInfo.imageLinks.smallThumbnail}}"
+                                                               title="{{l1.volumeInfo.title}}"></a>
+            </div>
+        </li>
+        <a href>Mais »</a>
+    </ul>
+</div>
+<div id="more-books"></div>

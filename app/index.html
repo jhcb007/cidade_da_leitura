@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="pt-bt" ng-app="cidadeLeituraAPP" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="pt-bt" ng-app="cidadeLeituraAPP" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="pt-bt" ng-app="cidadeLeituraAPP" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="pt-bt" ng-app="cidadeLeituraAPP" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cidade da Leitura</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="wrap-books">
+    <header id="search">
+        <h1 id="logo"><a href="#!/inicio" style="margin-left: -60px;">Cidade da Leitura</a></h1>
+        <form id="search_form">
+            <input type="text" id="search_input" placeholder="" ng-model="_pesquisa" class="form-control">
+            <button id="search_button" class="btn btn-large" ng-click="_consulta(_pesquisa)" type="button">Pesquisar
+            </button>
+        </form>
+        <ul class="menu">
+            <li><a href="#!/minha_biblioteca" style="margin-left: -50px;">Minha Biblioteca</a></li>
+        </ul>
+    </header>
+    <div id="wrapper">
+        <div id="main" ng-view></div>
+    </div>
+    <div id="categories">
+        <div>
+            <ul>
+                <li><strong>Categorias</strong>
+                    <br class="clear">
+                    <div>
+                        <ul class="cat">
+                            <li><a href>Arte</a></li>
+                            <li><a href>Biografia</a></li>
+                            <li><a href>Crianças</a></li>
+                            <li><a href>Clássicos</a></li>
+                            <li><a href>Histórias em Quadrinhos</a></li>
+                            <li><a href>Livros de Receitas</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="cat">
+                            <li><a href>Crime</a></li>
+                            <li><a href>Fantasia</a></li>
+                            <li><a href>História</a></li>
+                            <li><a href>Poesia</a></li>
+                            <li><a href>Psicologia</a></li>
+                            <li><a href>Religião</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="cat">
+                            <li><a href>Romance</a></li>
+                            <li><a href>Ciência</a></li>
+                            <li><a href>Auto-ajuda</a></li>
+                            <li><a href>Suspense</a></li>
+                            <li><a href>Espiritualidade</a></li>
+                            <li><a href>Viagem</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><strong>Autores</strong>
+                    <br class="clear">
+                    <ul>
+                        <li><a href>Hermann Hesse</a></li>
+                        <li><a href>Kurt Vonnegut</a></li>
+                        <li><a href>Dostoyevsky</a></li>
+                        <li><a href>Georgie R. R. Martin</a></li>
+                        <li><a href>Stephen King</a></li>
+                        <li><a href>Aldous Huxley</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div class="wrapper">
+        <ul class="copyright">
+            <li>
+                <small>© Felipe Dias, José Henrique e Maicon J. Fritsch
+                </small>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script>window.jQuery || document.write('<script src="../node_modules/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="../node_modules/tether/dist/js/tether.min.js"></script>
+<script src="../node_modules/holderjs/holder.min.js"></script>
+<script>
+    $(function () {
+        Holder.addTheme("thumb", {background: "#55595c", foreground: "#eceeef", text: "Thumbnail"});
+    });
+</script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-route/angular-route.min.js"></script>
+<script src="../node_modules/angular-resource/angular-resource.min.js"></script>
+<script src="../node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="../node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="view/servicosGeral.js"></script>
+<script src="view/InicioController.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

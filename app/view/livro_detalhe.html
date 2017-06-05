@@ -1,0 +1,34 @@
+<div style="">
+    <div class="wrap-book">
+        <div class="book">
+            <img ng-src="{{livro.volumeInfo.imageLinks.small}}">
+        </div>
+    </div>
+    <div id="wrap-info">
+        <h1>{{livro.volumeInfo.title}}</h1>
+        <h3>{{livro.volumeInfo.subtitle}}</h3>
+        <br><strong>Autor: <span ng-repeat="a in livro.volumeInfo.authors">{{a}}</span></strong>
+        <br><strong>Publicado por, {{livro.volumeInfo.publisher}}</strong>
+        <br>
+        <div class="description" ng-bind-html="livro.volumeInfo.description">
+            <div class="more-block" ng-bind-html="livro.volumeInfo.description"></div>
+        </div>
+        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fceulpsistcomp&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId=213074305485260"
+                width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowTransparency="true"></iframe>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=213074305485260";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/ceulpsistcomp" data-numposts="10"></div>
+
+    </div>
+    <a class="btn save-book" target="_blank" href="{{livro.volumeInfo.previewLink}}">Visualizar</a>
+    <a class="btn save-book" ng-click="set_biblioteca(livro)" href>+ Salvar na minha biblioteca</a>
+</div>

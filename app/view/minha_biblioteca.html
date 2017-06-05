@@ -1,0 +1,13 @@
+<div id="books" class="">
+    <h1>Meus Livros</h1>
+    <ul>
+        <li ng-repeat="l in livros">
+            {{l.imageLinks}}
+            <div class="book">
+                <a href="#!/livro/{{l.id}}" class="img "><img ng-src="{{l.volumeInfo.imageLinks.thumbnail}}"
+                                                              title="{{l.volumeInfo.title}}"></a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="more-books"></div>
